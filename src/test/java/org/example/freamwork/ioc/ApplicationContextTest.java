@@ -2,6 +2,7 @@ package org.example.freamwork.ioc;
 
 import static org.assertj.core.api.Assertions.*;
 
+import org.example.domain.testPost.testPost.repository.TestPostRepository;
 import org.example.domain.testPost.testPost.service.TestPostService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -41,10 +42,10 @@ class ApplicationContextTest {
     }
 
     @Test
-    @DisplayName("testPostRepository")
+    @DisplayName("testPostRepository 빈 얻기")
     public void t4() {
         TestPostRepository testPostRepository = applicationContext.genBean("testPostRepository");
 
-        assertThat(testPostService).isNotNull();
+        assertThat(testPostRepository).isNotNull();
     }
 }

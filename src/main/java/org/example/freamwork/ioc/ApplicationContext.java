@@ -2,6 +2,7 @@ package org.example.freamwork.ioc;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.example.domain.testPost.testPost.repository.TestPostRepository;
 import org.example.domain.testPost.testPost.service.TestPostService;
 
 public class ApplicationContext {
@@ -22,6 +23,7 @@ public class ApplicationContext {
         if (bean == null) {
             bean = switch (beanName) {
                 case "testPostService" -> new TestPostService();
+                case "testPostRepository" -> new TestPostRepository();
                 default -> null;
             };
             beans.put(beanName, bean);
