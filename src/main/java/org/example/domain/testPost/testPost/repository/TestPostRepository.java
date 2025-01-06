@@ -1,6 +1,6 @@
 package org.example.domain.testPost.testPost.repository;
 
-import org.example.freamwork.annotations.Repository;
+import org.example.framework.annotations.Repository;
 
 @Repository
 public class TestPostRepository {

@@ -1,4 +1,4 @@
-package org.example.freamwork.ioc;
+package org.example.framework.ioc;
 
 import java.util.HashMap;
 import java.util.Map;
