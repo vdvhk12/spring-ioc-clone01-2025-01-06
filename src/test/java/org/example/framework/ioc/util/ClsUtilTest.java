@@ -17,4 +17,13 @@ class ClsUtilTest {
         assertThat(cls).isEqualTo(TestCar.class);
     }
 
+    @Test
+    @DisplayName("ClsUtil.construct")
+    public void t2() {
+        TestCar testCar = ClsUtil.construct("org.example.framework.ioc.util.sample.TestCar", new Object[]{"BMW", 1234});
+
+        assertThat(testCar.getName()).isEqualTo("BMW");
+        assertThat(testCar.getNumber()).isEqualTo(1234);
+    }
+
 }
