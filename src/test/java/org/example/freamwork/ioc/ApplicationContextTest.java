@@ -1,6 +1,4 @@
-package org.example.freamework.ioc;
-
-import static org.junit.jupiter.api.Assertions.*;
+package org.example.freamwork.ioc;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
