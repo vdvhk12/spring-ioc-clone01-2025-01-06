@@ -2,6 +2,7 @@ package org.example.freamwork.ioc;
 
 import static org.assertj.core.api.Assertions.*;
 
+import org.example.domain.testPost.testPost.service.TestPostService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

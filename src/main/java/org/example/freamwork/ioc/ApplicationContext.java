@@ -1,5 +1,7 @@
 package org.example.freamwork.ioc;
 
+import org.example.domain.testPost.testPost.service.TestPostService;
+
 public class ApplicationContext {
     private String basePackage;
 
@@ -8,5 +10,12 @@ public class ApplicationContext {
     }
 
     public void init() {
+    }
+
+    public <T> T genBean(String beanName) {
+        if (beanName.equals("testPostService")) {
+            return (T) new TestPostService();
+        }
+        return null;
     }
 }
