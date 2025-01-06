@@ -12,7 +12,7 @@ class ClsUtilTest {
     @Test
     @DisplayName("ClsUtil.loadClass")
     public void t1() {
-        Class<TestCar> cls = ClsUtil.loadClass("org.example.framework.ioc.util.sample");
+        Class<TestCar> cls = ClsUtil.loadClass("org.example.framework.ioc.util.sample.TestCar");
 
         assertThat(cls).isEqualTo(TestCar.class);
     }
