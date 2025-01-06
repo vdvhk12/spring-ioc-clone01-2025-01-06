@@ -3,6 +3,7 @@ package org.example.freamwork.ioc;
 import java.util.HashMap;
 import java.util.Map;
 import org.example.domain.testPost.testPost.repository.TestPostRepository;
+import org.example.domain.testPost.testPost.service.TestFacadePostService;
 import org.example.domain.testPost.testPost.service.TestPostService;
 
 public class ApplicationContext {
@@ -22,6 +23,10 @@ public class ApplicationContext {
 
         if (bean == null) {
             bean = switch (beanName) {
+                case "testFacadePostService" -> new TestFacadePostService(
+                    genBean("testPostService"),
+                    genBean("testPostRepository")
+                );
                 case "testPostService" -> new TestPostService(
                     genBean("testPostRepository")
                 );
